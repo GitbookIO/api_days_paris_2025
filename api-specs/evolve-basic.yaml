@@ -335,31 +335,8 @@ components:
       type: http
       scheme: bearer
       description: |
-        All API requests require authentication using an API key passed in the 
-        Authorization header as a Bearer token.
-        
-        ## Getting your API key
-        
-        You can find your API keys in the Evolve Payments Dashboard. We provide 
-        two types of keys:
-        
-        - **Test keys** start with `sk_test_` - use these for development and testing
-        - **Live keys** start with `sk_live_` - use these for production
-        
-        ## Making authenticated requests
-        
-        Include your API key in the `Authorization` header as a Bearer token:
-        ```bash
-                curl https://api.evolvepayments.com/v1/payments \
-                  -H "Authorization: Bearer sk_test_1a2b3c4d5e6f"
-        ```
-        
-        ## Security best practices
-        
-        - Never share your API keys publicly
-        - Use test keys during development
-        - Rotate your keys regularly
-        - Store keys securely using environment variables
+        API key authentication. Include your API key in the Authorization header as a Bearer token.
+        Example: `Authorization: Bearer sk_test_1a2b3c4d5e6f`
 
   schemas:
     Payment:
