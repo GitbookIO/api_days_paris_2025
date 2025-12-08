@@ -82,7 +82,7 @@ tags:
   - name: Customers
     description: Create and manage customer records
     x-page-title: Customers API V4
-    x-page=icon: user-group
+    x-page=icon: people-group
 
 paths:
   /payments:
