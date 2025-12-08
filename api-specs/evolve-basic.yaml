@@ -82,7 +82,7 @@ tags:
   - name: Customers
     description: Create and manage customer records
     x-page-title: Customers API V4
-    x-page=icon: people-group
+    x-page-icon: user-group
 
 paths:
   /payments:
@@ -189,6 +189,62 @@ paths:
       summary: Retrieve a payment
       description: Retrieves the details of a previously created payment.
       operationId: getPayment
+      x-codeSamples:
+        - lang: curl
+          label: cURL
+          source: |
+            curl https://api.evolvepayments.com/v1/payments/pay_1a2b3c4d5e6f \
+              -H "Authorization: Bearer sk_test_1a2b3c4d5e6f"
+        - lang: python
+          label: Python
+          source: |
+            import requests
+            
+            url = "https://api.evolvepayments.com/v1/payments/pay_1a2b3c4d5e6f"
+            headers = {"Authorization": "Bearer sk_test_1a2b3c4d5e6f"}
+            
+            response = requests.get(url, headers=headers)
+            payment = response.json()
+            print(f"Status: {payment['status']}")
+        - lang: javascript
+          label: Node.js
+          source: |
+            const axios = require('axios');
+            
+            const getPayment = async (paymentId) => {
+              const response = await axios.get(
+                `https://api.evolvepayments.com/v1/payments/${paymentId}`,
+                {
+                  headers: {
+                    'Authorization': 'Bearer sk_test_1a2b3c4d5e6f'
+                  }
+                }
+              );
+              
+              console.log('Payment status:', response.data.status);
+              return response.data;
+            };
+            
+            getPayment('pay_1a2b3c4d5e6f');
+        - lang: ruby
+          label: Ruby
+          source: |
+            require 'net/http'
+            require 'json'
+            require 'uri'
+            
+            payment_id = 'pay_1a2b3c4d5e6f'
+            uri = URI("https://api.evolvepayments.com/v1/payments/#{payment_id}")
+            
+            http = Net::HTTP.new(uri.host, uri.port)
+            http.use_ssl = true
+            
+            request = Net::HTTP::Get.new(uri.path)
+            request['Authorization'] = 'Bearer sk_test_1a2b3c4d5e6f'
+            
+            response = http.request(request)
+            payment = JSON.parse(response.body)
+            puts "Status: #{payment['status']}"
       parameters:
         - name: id
           in: path
