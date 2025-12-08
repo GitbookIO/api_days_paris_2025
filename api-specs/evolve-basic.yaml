@@ -2,10 +2,69 @@ openapi: 3.0.3
 info:
   title: Evolve Payments API
   description: |
-    # Evolve Payments API
     Modern payment processing API for SaaS companies. Accept payments, manage customers, and handle refunds with ease.
-    **Authentication**: All API requests require authentication using an API key passed in the Authorization header as a Bearer token.
-    **Base URL**: All API requests should be made to: `https://api.evolvepayments.com/v1`
+    
+    {% hint style="info" %}
+    **Authentication required:** All API requests require authentication using an API key passed in the Authorization header as a Bearer token.
+    {% endhint %}
+    
+    ### Getting Started
+    
+    {% stepper %}
+    {% step %}
+    ### Sign up for an account
+    Create your Evolve Payments account at [evolvepayments.com/signup](https://evolvepayments.com/signup) to get started.
+    {% endstep %}
+    
+    {% step %}
+    ### Get your API key
+    Navigate to the Dashboard and copy your API key. Test keys start with `sk_test_` and live keys start with `sk_live_`.
+    {% endstep %}
+    
+    {% step %}
+    ### Make your first request
+    Try creating a test payment using the `POST /payments` endpoint to verify your integration.
+    {% endstep %}
+    {% endstepper %}
+    
+    {% tabs %}
+    {% tab title="Production" %}
+    **Base URL**  
+    `https://api.evolvepayments.com/v1`
+    
+    All API requests should be made to this base URL. Use your live API key (`sk_live_...`) for production requests.
+    {% endtab %}
+    
+    {% tab title="Test" %}
+    **Base URL**  
+    `https://api.evolvepayments.com/v1`
+    
+    Use your test API key (`sk_test_...`) to make test requests. Test mode uses the same base URL but won't process real charges.
+    {% endtab %}
+    {% endtabs %}
+    
+    ### Authentication
+    
+    Include your API key in the `Authorization` header as a Bearer token:
+```bash
+    curl https://api.evolvepayments.com/v1/payments \
+      -H "Authorization: Bearer sk_test_1a2b3c4d5e6f" \
+      -H "Content-Type: application/json"
+```
+    
+    **API Key Types:**
+    - **Test keys** (`sk_test_...`) - For development and testing, won't process real charges
+    - **Live keys** (`sk_live_...`) - For production use, processes real transactions
+    
+    **Best Practices:**
+    - Never share your API keys publicly or commit them to version control
+    - Use environment variables to store keys securely
+    - Rotate your keys regularly
+    - Use test keys during development and integration
+    
+    {% hint style="warning" %}
+    Keep your API keys secure. Anyone with your live key can process payments on your account.
+    {% endhint %}
   version: 1.0.0
   contact:
     name: Evolve Payments Support
