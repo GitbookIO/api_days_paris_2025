@@ -77,9 +77,10 @@ security:
 tags:
   - name: Payments
     description: Create and manage payment transactions
-    x-page-title: Foo
+    # x-page-title: Payments API V3
   - name: Customers
     description: Create and manage customer records
+    x-page-title: Customers API V4
 
 paths:
   /payments:
