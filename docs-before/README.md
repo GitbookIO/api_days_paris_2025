@@ -12,8 +12,6 @@ metaLinks:
 
 # Evolve Payments
 
-<div align="left"><figure><img src=".gitbook/assets/Card-12.png" alt="" width="563"><figcaption></figcaption></figure></div>
-
 ## Basic Integration <a href="#basic-integration" id="basic-integration"></a>
 
 This guide walks you through a basic Evolve Payments integrationfrom setting up your sandbox API key, to creating your first test charge, handling responses, and preparing to go live in production.
