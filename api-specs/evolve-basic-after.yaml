@@ -1,7 +1,7 @@
 openapi: 3.0.3
+x-page-icon: credit-card
 info:
   title: Evolve Payments API
-  x-page-icon: credit-card
   description: |
     # Evolve Payments API Documentation
     Modern payment processing API for SaaS companies. Accept payments, manage customers, and handle refunds with ease.
