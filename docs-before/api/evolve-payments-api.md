@@ -39,4 +39,12 @@ To get up and running quickly, start with the onboarding guides:
 
 For detailed endpoint descriptions, request/response schemas, and error codes, see the full [Evolve Payments API reference](https://app.gitbook.com/o/X9uddHR2nO73YvXdCY0t/s/uBtQCmrTBT0sn5qIsAPe/).
 
+{% openapi-operation spec="my-organization-api" path="/payments" method="post" %}
+[OpenAPI my-organization-api](https://github.com/GitbookIO/api_days_paris_2025/raw/refs/heads/main/api-specs/evolve-basic-before.yaml)
+{% endopenapi-operation %}
+
+{% openapi-operation spec="my-organization-api" path="/payments/{id}" method="get" %}
+[OpenAPI my-organization-api](https://github.com/GitbookIO/api_days_paris_2025/raw/refs/heads/main/api-specs/evolve-basic-before.yaml)
+{% endopenapi-operation %}
+
 <br>

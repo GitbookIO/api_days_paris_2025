@@ -13,6 +13,8 @@ metaLinks:
 
 ## Basic Integration <a href="#basic-integration" id="basic-integration"></a>
 
+> Here is a quote about this page.
+
 **Test Mode Setup:**
 
 {% hint style="warning" %}
