@@ -1,7 +1,7 @@
 ---
 description: >-
-  Learn how to set up a basic Evolve Payments integration in sandbox, process
-  test charges, handle responses, and prepare to go live.
+  Learn how to set up a basic Evolve Payments integration, process test charges,
+  handle responses, and prepare to go live.
 cover: >-
   https://gitbook.com/adaptive-content-demo/~gitbook/image?url=https%3A%2F%2F3088035508-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F092wqj6J0y3Z75k04qFH%252Fuploads%252FzUjaiqYi0eKNV9DoRESc%252FCover.svg%3Falt%3Dmedia%26token%3De90a4529-a605-4312-abf7-c492c3be255a&width=1248&dpr=2&quality=100&sign=b1939181&sv=2
 coverY: 0
